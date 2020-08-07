@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css"> 
+
+</head>
+<body>
+<div class="head">
+<h1>This web page is developed using grid layout</h1>
+</div>
+ <!--Menubar-->
+        
+ <div id="navbar"> 
+  <!--Code for trigram and close button is refered from https://www.w3schools.com/charsets/ref_utf_symbols.asp-->
+  <div id="navside" onclick="navigate()" style="margin-left: 0px; font-size:30px; cursor:pointer;">&#9776;</div> 
+  <!--To set a simple logo for the website which can be seen in menubar-->  
+  <h1 id="logo"><U>W</U></h1>
+  <!--To set the menu options and ech menu option navigate to a specific part of the webpage(internal linking)-->
+    
+      <div id="option1">
+      <a href="index.html#portfolio" >PORTFOLIO</a></div>
+      <div id="option2">
+      <a onclick="navigate()">CONTENT</a>  </div><!--trigram is set to open the content panel-->
+      <div id="option3">  
+      <a href="index.html#contact">CONTACT</a>  </div>   
+</div>
+<!--Content panel-->
+
+        <!--For this project the referenced website does not have option but the panel is added in the left side of the website 
+          and it is set as hidden while clicking on the trigram or content menu in the menubar we can see the panel-->
+          <div id="mySidenav" class="sidenav">
+            <!--close button action refered from w3school-->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNavigation()">&times;</a>
+            <h1>Content</h1>
+            <!--Each item on the content panel is created using button. And on clicking each button a listen will listen to the action 
+              and show all subitems(expand), by next click it will hide the subitem(collapse)-->
+            <button type="button" class="collapse">Lab 1</button>
+            <div class="content">
+              <!--Subitems are listed using an unordered list and each listed item is a link-->
+              <ul>
+                <li><a href="index.html#first"><b>About</b></a></li>
+                <li><a href="https://github.com/ajosep13/Group3Lab1"><b>Repository</b></a></li>
+                <li><a href="https://www.youtube.com/watch?v=7qvyinhd6YE&feature=youtu.be"><b>Tutorial</b></a></li>
+              </ul>
+            </div>
+  
+            <!--Button for Lab 2 and its subitems-->
+            <button type="button" class="collapse">Lab 2</button>
+            <div class="content">
+              <ul>
+                <li><a href="index.html#second"><b>About</b></a></li>
+                <li><a href="https://github.com/sharathchintam/Group-4-Lab-2"><b>Repository</b></a></li>
+                <li><a href="https://www.youtube.com/watch?v=phMDJ8zPqWs&feature=youtu.be"><b>Tutorial</b></a></li>
+              </ul>
+            </div>
+  
+            <!--Button for Lab 3 and its subitems-->
+            <button type="button" class="collapse">Lab 3</button>
+            <div class="content">
+              <ul>
+                <li><a href="index.html#third"><b>About</b></a></li>
+                <li><a href="https://github.com/ajosep13/Group-8-Lab-3"><b>Repository</b></a></li>
+                <li><a href="https://www.youtube.com/watch?v=wpJkx-8FDxk&t=375s"><b>Tutorial</b></a></li>
+              </ul>
+            </div>
+  
+            <!--Button for Lab 4 and its subitems-->
+            <button type="button" class="collapse">Lab 4</button>
+            <div class="content">
+              <ul>
+                <li><a href="index.html#fourth"><b>About</b></a></li>
+                <li><a href="https://github.com/ajosep13/Group-3-Lab-4"><b>Repository</b></a></li>
+                <li><a href="https://www.youtube.com/watch?v=ywLIc0ERW7g&t=14s"><b>Tutorial</b></a></li>
+              </ul>
+            </div>
+  
+            <!--Button for Lab 5 and its subitems-->
+            <button type="button" class="collapse">Lab 5</button>
+            <div class="content">
+              <ul>
+                <li><a href="index.html#fifth"><b>About</b></a></li>
+                <li><a href="https://github.com/ajosep13/Group-3-Lab-5"><b>Repository</b></a></li>
+                <li><a href="#"><b>Tutorial</b></a></li>
+              </ul>
+            </div>
+  
+            <!--Button for Lab 6-->
+            <button type="button" class="collapse">Lab 6</button>
+            <div class="content">
+              <ul>
+                <li><a href="index.html#sixth"><b>About</b></a></li>
+                <li><a href="https://github.com/ajosep13/Group-3-Lab-6"><b>Repository</b></a></li>
+                <li><a href="#"><b>Tutorial</b></a></li>
+              </ul>
+            </div>
+          
+          <!--Button for Lab 7-->
+          <button type="button" class="collapse">Lab 7</button>
+          <div class="content">
+            <ul>
+              <li><a href="index.html#seventh"><b>About</b></a></li>
+              <li><a href="https://github.com/ajosep13/Group-3-Lab-7"><b>Repository</b></a></li>
+              <li><a href="https://youtu.be/jc_wBr2TtaI"><b>Tutorial</b></a></li>
+            </ul>
+          </div>
+        </div>
+          <!--Cover-->
+
+        <!--portion after the menubar with picture and text. When we open the browser it is this portion that opens-->
+        <div id="top">
+          <div id="topimg">
+          <img src="pictures/flower1.png">
+          </div>
+          <div id="toptext">
+              <h1><U>W</U></h1>
+              <p id="fline">Web design and development</p>
+              <p id="sline">It is an interesting subject</p>
+              <button><a href="index.html#portfolio">More Details</a></button>
+          </div>
+        </div>
+      <br><br>
+<div class="grid-container">
+  <div class="caption2"><h1 id="portfolio">PORTFOLIO</h1></div>
+  <div class="tile1">
+    <div class="hide">
+      <div class="first box1" id="first">
+        <div class="hideitem" style="text-align: center;margin-left: 10px;">
+          <p id="para">Lab1 is about the usage of various git tools.<br>
+          Here we create on creating 
+          an account in github, manage repository, <br>
+          manipulate files and solving commit conflicts.
+        </p></div>
+        <a href="https://github.com/ajosep13/Group3Lab1">
+          <img src="pictures/lab1.png"><h1>Lab 1</h1></a>
+      </div>
+      </div>
+  </div>
+
+  <div class="tile2">
+    <div class="hide">
+    <div class="second box1" id="second">
+      <div class="hideitem"><p id="para">Lab 2 is about html language and basic elements like <br>
+      anchor, heading, image, list and paragraph. </p></div>
+      <a href="https://github.com/sharathchintam/Group-4-Lab-2"><img src="pictures/lab2.png"><h1>Lab 2</h1></a>
+    </div>
+    </div>
+  </div>
+
+  <div class="tile3">
+    <div class="hide">
+      <div class="third box2" id="third" id="para">
+        <div class="hideitem"><p>Lab 3 is about basic programming using javascript</p></div>
+        <a href="https://github.com/ajosep13/Group-8-Lab-3"><img src="pictures/lab3.png"><h1>Lab 3</h1></a>
+      </div>
+      </div>
+  </div>  
+
+  <div class="tile4">
+  <div class="hide">
+          <div class="fourth box3" id="fourth" id="para">
+            <div class="hideitem"><p>Lab 4 is about dynamic table creation using html and javascript.</p></div>
+            <a href="https://github.com/ajosep13/Group-3-Lab-4"><img src="pictures/lab4.jpg"><h1>Lab 4</h1></a>
+          </div>
+          </div>
+  </div>
+  <div class="tile5">
+    <div class="hide">
+      <div class="fifth box3" id="fifth">
+        <div class="hideitem"><p id="para">Lab 5 is about float layout and positioning.<br>
+        </p></div>
+        <a href="https://github.com/ajosep13/Group-3-Lab-5"><img src="pictures/lab5.jpg"><h1>Lab 5</h1></a>
+      </div>
+      </div>
+</div>
+
+<div class="tile6">
+  <div class="hide">
+    <div class="sixth box1" id="sixth">
+      <div class="hideitem"><p id="para">Lab 6 is about flexbox and flex layout.<br>
+      </p></div>
+      <a href="https://github.com/ajosep13/Group-3-Lab-6"><img src="pictures/lab6.png"><h1>Lab 6</h1></a>
+    </div>
+    </div>
+</div>
+
+<div class="tile7">
+  <div class="hide">
+    <div class="seventh box2" id="seventh">
+      <div class="hideitem"><p id="para">Lab 7 is about grid layout.<br>
+      </p></div>
+      <a href="https://github.com/ajosep13/Group-3-Lab-7"><img src="pictures/lab7.png"><h1>Lab 7</h1></a>
+    </div>
+    </div>
+
+
+</div>
+</div>
+<!--Contact-->
+<div class="bottom">
+  <div>
+      <br>
+      <br>
+      <h1 id="contact">CONTACT</h1>
+<h4>Ammu-ajosep13@confederationcollege.ca</h4>
+<h4>Sharath-schintam@confederationcollege.ca</h4>
+      <h4>Vaidehi-vdarji@confederationcollege.ca</h4>              
+  </div>
+</div>
+
+<!--Footer area for reference-->
+<div class="footer">
+    <br>
+      <footer>
+        <I>Inspired by Helen Bouman <a href="http://helenbouman.com/#top">http://helenbouman.com/#top</a></I>
+      </footer>
+</div>
+
+<!--Javascript code to open and close the content panel. And also collapse-expand function on content panel. 
+          Referenced from w3school-->
+          <script>
+            var fold = document.getElementsByClassName("collapse"); //To get the element id of the button clicked 
+            var i;
+            for (i = 0; i < fold.length; i++) 
+            {
+              fold[i].addEventListener("click", function() {        //if any click event is performed
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block")                //if the subitems are already visible then hide it.
+               {
+                  content.style.display = "none";
+                } 
+              else                                                  //If the subitems are hidden then make it visible.
+                {
+                  content.style.display = "block";
+                }
+                });
+              }
+              function navigate() {                                //To make the content panel visible
+              document.getElementById("mySidenav").style.width = "250px";
+              }
+              function closeNavigation() {                        //To close the content panel.
+              document.getElementById("mySidenav").style.width = "0";
+              }
+            </script>
+</body>
+</html>
