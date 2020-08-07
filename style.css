@@ -5,12 +5,24 @@ body{
 	margin:0px;
 	padding:0px;
 	height: 100%;
+	display: grid;
+	/* grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 200px; */
+	grid-template-areas: "head"
+	  "nav"
+	  "top" 
+	  "container" 
+	  "bottom"
+	  "footer";
 }
 
 
 /*To display 'This pages was built using Flexbox Layout' on the top*/
 .head{
-    display: grid;
+	/* display: grid; */
+	grid-area: head;
+	/* display: subgrid; */
+	display: inline-grid;
     justify-content: center;
 }
 
@@ -28,11 +40,12 @@ h1{
 #option2{grid-area:opt2;}
 #option3{grid-area:opt3}
 #navbar{
-	display:grid;
+	/* display:grid; */
+	grid-area: nav;
+	display: inline-grid;
 	background-color: rgb(248, 247, 247);
 	width: 100%;
 	grid-template-areas:'cpanel cpanel logo logo logo logo opt1 opt2 opt3' ;
-	
 }
 
 
@@ -157,7 +170,8 @@ font-size: 50px;
 	transform: translate(-13%, -42%,);
 }
 #top{
-	display:grid;
+	grid-area: top;
+	display:inline-grid;
 	grid-template-areas: 'text text text cimage';
 	grid-gap: 25px;
 }
@@ -215,6 +229,7 @@ font-size: 50px;
 .tile7 { grid-area:seven;}
 
 .grid-container {
+	grid-area: container;
   	display: grid;
 	  grid-template-areas:
 	  		'cap2 cap2 cap2 cap2 cap2 cap2'
@@ -225,6 +240,7 @@ font-size: 50px;
     		'seven seven seven seven seven seven';
     	grid-gap: 22px;
 	margin:auto;
+	margin-bottom: 20px;
     	max-width:1220px; 
 }
 
@@ -339,6 +355,7 @@ font-size: 50px;
 
 /*Style the area to keep the contact information*/
 .bottom{
+	grid-area: bottom;
 	width: 100%;
 	height:40vh;
 	text-align: center;
@@ -358,6 +375,7 @@ font-size: 50px;
 }
 /*Style the footer*/
 .footer{
+	grid-area: footer;
 	width: 100%;
 	height:10vh;
 	text-align: center;
